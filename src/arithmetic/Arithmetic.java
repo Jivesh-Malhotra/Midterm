@@ -26,9 +26,13 @@ public class Arithmetic
        
         ArithmeticBase r= new ArithmeticBase();
         Scanner in= new Scanner(System.in);
+        System.out.println("Enter The first number : ");
         int n= in.nextInt();
+        System.out.println("Enter The second number : ");
         int m= in.nextInt();
-        double result = r.calculate(m,n);
+        System.out.println("Enter arithmetic operation to Perform: ");
+        ArithmeticBase.Opt op=in.next();
+        double result = r.calculate(m,n,op);
         System.out.println("result :" +result); 
     
     }

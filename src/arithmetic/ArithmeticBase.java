@@ -15,21 +15,21 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
+    public enum Opt { PLUS, MINUS, TIMES, DIVIDE}
  public double x,y;
-    double calculate(double x, double y) 
+    double calculate(double x, double y, Opt op) 
         {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("Enter arithmetic operation to Perform: ");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
+        //Scanner sc =new Scanner(System.in);
+        //String s= sc.next();
+        switch (op) //s.toUpperCase()
         {
-            case "PLUS":
+            case PLUS:
                 return x + y;
-            case "MINUS":
+            case MINUS:
                 return x - y;
-            case "TIMES":
+            case TIMES:
                 return x * y;
-            case "DIVIDE":
+            case DIVIDE:
                 return x / y;
             default:
                 throw new AssertionError("Unknown operations " + this);
